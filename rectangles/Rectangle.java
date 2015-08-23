@@ -1,7 +1,21 @@
+/*
+Question - Implement a class Rectangle with the following:
+
+Name - Rectangle
+Properties - float length
+			 float width 
+			 String name
+Functions - void setValues(float length, float width, String name)
+			float getArea()
+			float getPerimiter()
+			boolean isSquare
+			
+Author - Neerad Kumar G
+*/
 class Rectangle{
 	protected float length;
-	float width;
-	private String name;
+	protected float width;
+	public String name;
 	
 	void setValues(float a, float b, String c){
 		this.length = a;
@@ -23,20 +37,16 @@ class Rectangle{
 		int a;
 		Rectangle rect;
 		rect = new Rectangle();
-		Rectangle rect1;
-		rect1 = new Rectangle();
-		rect.setValues(10,20,"rect");
-		float area = rect.getArea();
-		System.out.println("Area of rect is "+area);
+		rect.setValues(10,20,"myRect");
+		
+		System.out.println("Area of rect "+rect.name+" is "+rect.getArea());
+		
 		boolean isSquare = rect.isSquare();
 		if(isSquare){
-			System.out.println("Rect is a square!");
+			System.out.println("Rect is a square!");		
 		}
-		else{
+		else{	
 			System.out.println("Rect is not a square!");
 		}
 	}
-	
-	
-	
 }
