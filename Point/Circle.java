@@ -8,22 +8,22 @@ public class Circle {
     }
     
     /*getters and setters*/
-    void getCenterX(){
+    float getCenterX(){
         //TODO
     }
-    void getCenterY(){
+    float getCenterY(){
         //TODO
     }
-    void getRadius(){
+    float getRadius(){
         //TODO
     }
-    float setCenterX(float x){
+    void setCenterX(float x){
         //TODO
     }
-    float setCenterY(float y){
+    void setCenterY(float y){
         //TODO
     }
-    float setRadius(float r){
+    void setRadius(float r){
         //TODO
     }
     
