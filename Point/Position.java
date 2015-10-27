@@ -1,3 +1,4 @@
+package position;
 public class Position {
     float x;
     float y ;
@@ -8,6 +9,10 @@ public class Position {
         y = b;
     }
     
+    Position(){
+        x=0;
+        y=0;
+    }
     /*getters and setters*/
     void setX(float a){
         x = a;
@@ -53,7 +58,12 @@ public class Position {
     }
     
     static boolean areInaStraightLine(Position a, Position b, Position c){
-           //TODO
+        float AB = a.getDistanceFromPoint(b);
+        float BC = b.getDistanceFromPoint(c);
+        float AC = c.getDistanceFromPoint(a);
+        if(BC+AC == AB) return true;
+        if(AB+BC==AC) return true;
+        if(AB+AC==BC) return true;
         return false;
     }
     public static void main(String[] args){

@@ -1,41 +1,51 @@
+package position;
+
+
+
 public class Circle {
     Position center;
     float radius;
     
     //Constructor
     Circle(float r, float x, float y){
-        //TODO
+        radius = r;
+        center = new Position(x,y);
     }
     
     /*getters and setters*/
     float getCenterX(){
-        //TODO
+        return center.getX();
     }
     float getCenterY(){
-        //TODO
+        return center.getY();
     }
     float getRadius(){
-        //TODO
+        return radius;
     }
     void setCenterX(float x){
-        //TODO
+        center.setX(x);
     }
     void setCenterY(float y){
-        //TODO
+        center.setY(y);
     }
     void setRadius(float r){
-        //TODO
+        radius = r;
     }
     
     float getArea(){
-        //TODO
+        return (float)(Math.PI*radius*radius);
     }
     
-    float isInsideCircle(Position p){
-        //TODO
+    boolean isInsideCircle(Position p){
+        return (center.getDistanceFromPoint(p) < radius);
     }
     
-    float isOutSideCircle(Postion p){
-        //TODO
+    boolean isOnCircle(Position p){
+        return (center.getDistanceFromPoint(p) == radius);
     }
+    
+    boolean isOutSideCircle(Position p){
+        return (center.getDistanceFromPoint(p) > radius);
+    }
+    
 }
